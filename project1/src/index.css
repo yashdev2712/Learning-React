@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Header {
+  background-color: rgb(143, 0, 143);
+  padding: 10px;
+  text-align: center;
+  color: white;
+  width: 100vw;
+  height: 20vh;
+}
+
+.form {
+  border: 2px solid rgba(0, 0, 0, 0.613);
+  padding: 10px;
+  margin: 10px;
+  width: 50%;
+}
+
+.form form {
+  display: flex;
+  gap: 1px;
+}
+
+.card {
+  border: 2px solid rgba(0, 0, 0, 0.613);
+  padding: 10px;
+  margin: 10px;
+  width: 50%;
+  display: flex;
+
+}
+
+.card img {
+  height: 90px;
+
+}
