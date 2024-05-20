@@ -1,33 +1,31 @@
+import React from 'react'
+import { data } from './data'
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selected, setSelected] = useState(null);
+  function onSingleSelect(getCurrentId) {
+    setSelected(getCurrentId === selected ? null : getCurrentId);
 
+  }
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="wrapper">
+        <h1>Accordian</h1>
+        {
+          data && data.length > 0 ?
+            data.map((item) => <div className='items'>
+              <div className='question' onClick={() => { onSingleSelect(item.id) }}>
+                <h3>{item.question}</h3>
+                <span>+</span>
+              </div>
+              {
+                selected === item.id ? <div>{item.answer}</div> : null
+              }
+            </div>)
+            : <span>No Data </span>
+        }
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
