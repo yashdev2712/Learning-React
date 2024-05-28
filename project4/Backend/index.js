@@ -9,6 +9,7 @@ const app = express();
 dotenv.config();
 
 app.use(cors());
+app.use(express.json());
 
 
 mongoose.connect(process.env.VITE_MONGOOSE_LINK)
@@ -30,5 +31,4 @@ app.use("/api/v1", rootRouter);
 
 app.listen(process.env.VITE_PORT, () => {
     console.log("server is running");
-    console.log(process.env.VITE_PORT);
-})
+});
