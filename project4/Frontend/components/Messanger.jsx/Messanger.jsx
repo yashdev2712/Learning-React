@@ -4,6 +4,9 @@ import { data } from '../../Peopledata'
 
 
 function Messanger() {
+    const handleOnClick = () => { 
+        
+    }
     return (
         <>
             <div className='main'>
@@ -11,7 +14,7 @@ function Messanger() {
                     <div className='search'>
                         <h1>NautilusChat</h1>
                         <input type="text" placeholder='Enter the person Name' />
-                        <button>Create Group</button>
+                        <button onClick={() => { handleOnClick() }}>Create Group</button>
                     </div>
                     <div className='people'>
                         {
