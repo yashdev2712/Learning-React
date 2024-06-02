@@ -4,7 +4,7 @@ const z = require("zod");
 const { user } = require("../models/UserSchema");
 const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
-const searchUser = require("../services/userServices")
+const searchUser = require("../services/userServices");
 dotenv.config();
 
 const JWT_SECRET = process.env.VITE_JWT_SECRET;

@@ -1,3 +1,4 @@
+/* Messanger.css */
 .main {
     height: 100vh;
     width: 100vw;
@@ -11,7 +12,8 @@
     padding: 15px;
     display: flex;
     flex-direction: column;
-
+    justify-content: space-between;
+    /* Ensure content is spaced */
 }
 
 .sideBar h1 {
@@ -34,7 +36,6 @@
     cursor: pointer;
 }
 
-
 .search {
     padding: 25px;
 }
@@ -56,22 +57,20 @@
 .people {
     padding: 15px;
     border-top: 1px solid whitesmoke;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
 .sticky-button {
     position: sticky;
     bottom: 0;
-    background: red;
+    background: #333;
     color: #fff;
     padding: 10px;
     font-size: 16px;
     text-align: center;
     cursor: pointer;
-    margin-top: auto; 
+    margin-top: auto;
 }
 
 .chat {
