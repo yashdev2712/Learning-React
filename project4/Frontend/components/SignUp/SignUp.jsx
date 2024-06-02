@@ -23,6 +23,7 @@ function SignUp() {
                     if (response.status = 200) {
                         const token = response.data.token;
                         localStorage.setItem("authToken", token);
+                        localStorage.setItem("User", userName);
                         navigate("/message")
                     }
                 }

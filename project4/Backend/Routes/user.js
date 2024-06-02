@@ -4,7 +4,7 @@ const z = require("zod");
 const { user } = require("../models/UserSchema");
 const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
-
+const searchUser = require("../services/userServices")
 dotenv.config();
 
 const JWT_SECRET = process.env.VITE_JWT_SECRET;
@@ -87,7 +87,24 @@ router.post("/signin", async (req, res) => {
     })
 })
 
-// app.get("/message")
+router.get("/getuser", async (req, res) => {
+    const searchQuery = req.query.q;
+    if (!searchQuery) {
+        return res.status(400).send({
+            Error: "query parameter is empty"
+        })
+    }
+    try {
+        const users = await searchUser(searchQuery);
+        res.json(users)
+
+    } catch (err) {
+        res.status(500).send({
+            error: "internal error occured"
+        })
+
+    }
+})
 
 
 module.exports = router;

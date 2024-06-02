@@ -1,0 +1,81 @@
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.sideBar {
+    height: 100vh;
+    width: 30%;
+    border: 1px solid whitesmoke;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sideBar h1 {
+    padding: 10px;
+}
+
+.sideBar input {
+    padding: 12px;
+    border-radius: 10px;
+    width: 65%;
+    outline: none;
+    border: 1px solid gray;
+}
+
+.sideBar button {
+    width: fit-content;
+    color: whitesmoke;
+    background-color: black;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+.search {
+    padding: 25px;
+}
+
+.search svg {
+    height: 30px;
+    width: 30px;
+}
+
+.people-message {
+    background-color: #202c3346;
+    border: 1px solid powderblue;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.people {
+    padding: 15px;
+    border-top: 1px solid whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sticky-button {
+    position: sticky;
+    bottom: 0;
+    background: red;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: auto; 
+}
+
+.chat {
+    height: 100vh;
+    width: 70%;
+    border: 1px solid whitesmoke;
+}

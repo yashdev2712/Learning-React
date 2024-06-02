@@ -2,7 +2,7 @@ import React from 'react'
 import { Navigate } from 'react-router-dom';
 
 
-function Protected({ childeren }) {
+function Protected({ children }) {
 
     const token = localStorage.getItem("authToken");
     if (!token) {
@@ -12,7 +12,7 @@ function Protected({ childeren }) {
             </>
         )
     }
-    return childeren;
+    return children;
 }
 
 export default Protected
